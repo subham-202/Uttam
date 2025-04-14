@@ -234,7 +234,7 @@ header{
 /*--------------------------------*/
 /*MEALS*/
 /*--------------------------------*/
-.section-meals:{
+.section-meals{
     padding: 0;
 }
 .meals-showcase{
@@ -249,6 +249,7 @@ header{
 .meal-photo{
     width: 100%;
     margin:0;
+    height: 11.6rem;
     overflow: hidden;
     background-color:#000;
 }
