@@ -31,7 +31,7 @@
 
         
         </header>
-        <section class="section-features">
+        <section>
             <div class="row">
         <h2>Our Mission - From Local Produce to Lasting Impact</h2>
         <p class="long-copy">
@@ -64,56 +64,86 @@
             
             </div>
         
-        
         </section>
-        <section class="section-meals">
-            <ul class="meals-showcase clearfix">
-            <li>
-                <figure class="meal-photo">
-            <img src="resources/images/1.jpg" alt="Korean bibimbap with egg and vegetables">
-                    </figure>
-            </li>
-             <li>
-                 <figure class="meal-photo">
-            <img src="resources/images/2.jpg" alt="Simple italian pizza with cherry tomatoes">
-                 </figure>
-            </li>
-             <li>
-                 <figure  class="meal-photo">
-            <img src="resources/images/3.jpg" alt="Chicken breast steak with vegetables">
-                 </figure>
-            </li>
-             <li>
-                 <figure class="meal-photo">
-            <img src="resources/images/4.jpg" alt="Autumn pumpkin soup">
-                 </figure>
-            </li>
-            
-            </ul>
-            
-                <ul class="meals-showcase clearfix">
-                    <li>
-                <figure class="meal-photo">
-            <img src="resources/images/5.jpg" alt="Paleo beef steak with vegetables">
+            <section class="section-meals">
+                <!-- Each farmer story -->
+                <figure class="meal-photo" onclick="openModal(0)">
+                  <img src="resources/images/1.jpg" alt="Laxman Oraon">
                 </figure>
-            </li>
-             <li>
-                 <figure class="meal-photo">
-            <img src="resources/images/6.jpg" alt="Healthy baguette with egg and vegetables">
-                 </figure>
-            </li>
-             <li>
-                 <figure class="meal-photo">
-            <img src="resources/images/7.jpg" alt="Burger with cheddar and bacon">
-                 </figure>
-            </li>
-             <li>
-                 <figure class="meal-photo">
-            <img src="resources/images/8.jpg" alt="Granola with cherries and strawberries">
-                 </figure>
-            </li>
-        </ul>
-        </section>
+                <figure class="meal-photo" onclick="openModal(1)">
+                  <img src="resources/images/2.jpg" alt="Munni Devi">
+                </figure>
+                <figure class="meal-photo" onclick="openModal(2)">
+                  <img src="resources/images/3.jpg" alt="Puspa Devi">
+                </figure>
+                <figure class="meal-photo" onclick="openModal(3)">
+                  <img src="resources/images/4.jpg" alt="Radha Devi">
+                </figure>
+                <figure class="meal-photo" onclick="openModal(4)">
+                  <img src="resources/images/5.jpg" alt="Savitri Devi">
+                </figure>
+                <figure class="meal-photo" onclick="openModal(5)">
+                  <img src="resources/images/6.jpg" alt="Meena Kumari">
+                </figure>
+              </section>
+              
+              <!-- Modal -->
+              <div id="modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2 id="modal-title"></h2>
+                  <p id="modal-body"></p>
+                  <!-- <button class="story-button" onclick="closeModal()">Close</button> -->
+                </div>
+              </div>
+              
+              <script>
+                const stories = [
+                  {
+                    title: "From Struggles to Stability — The Story of Laxman Oraon from Tilaitand",
+                    text: `Laxman Oraon, a small farmer from Tilaitand village in the Bero block of Ranchi district, Jharkhand, had long struggled with the whims of the local mandi system. Selling his vegetables and grains meant long travel, delayed payments, and losses to middlemen.
+                    Then came Uttam — a ray of change. Laxman could now sell his produce directly in Bero, earning stable, timely payments. Encouraged, he now experiments with better grains and pulses.
+                    “I didn’t have to leave the village or deal with traders anymore. Uttam is right here in Bero, and it respects my work and time,” he says with a smile.`
+                  },
+                  {
+                    title: "Munni Devi’s New Confidence from Her Land in Bandhdih",
+                    text: `Munni Devi, a widow from Bandhdih, struggled to earn enough from her small land. Traders undervalued her produce and ignored her.
+                    But in 2023, Uttam changed that. Her first sale earned a fair price and immediate payment. With stable income, she now owns an irrigation pump and sends her children to school.
+                    “Uttam gave me more than income — it gave me strength.”`
+                  },
+                  {
+                    title: "Puspa Devi’s Rise as an Uttam Didi from Kasidih",
+                    text: `From household chores to entrepreneurship — Puspa Devi transformed her life by joining Uttam as a village-level Didi.
+                    With training from IMAGO and JSLPS, she manages a local shop of Uttam products, earning regularly. She even paid her daughter’s school fee.
+                    “Earlier, I asked before spending. Now, I plan before spending.”`
+                  },
+                  {
+                    title: "Radha Devi of Lahna Village — From SHG Member to Businesswoman",
+                    text: `Radha Devi never imagined she’d run a business. Selected as Uttam Didi, she now sells Uttam’s products and earns a steady income, contributing to her family’s financial decisions.
+                    “Earlier, I only knew how to run a kitchen. Now I run a business.”`
+                  },
+                  {
+                    title: "Mahesh Kumar from Chanho — A Job with Dignity and Dreams",
+                    text: `Mahesh Kumar struggled with seasonal labor before joining Uttam’s agro-processing plant. Now, she earns a stable income, providing for her children and planning for the future.
+                    “This job gave me dignity. I now think about growth, not just survival.”`
+                  },
+                  {
+                    title: "Meena Kumari from Semartoli — From Firewood to Financial Security",
+                    text: `Meena Kumari’s life was defined by scarcity until she joined Uttam’s agro-processing unit. Now, she manages her family’s finances, buys quality goods, and contributes to household decisions.
+                    “Uttam gave me more than a salary — it gave me control over my life.”`
+                  }
+                ];
+              
+                function openModal(index) {
+                  document.getElementById("modal").style.display = "block";
+                  document.getElementById("modal-title").innerText = stories[index].title;
+                  document.getElementById("modal-body").innerText = stories[index].text;
+                }
+              
+                function closeModal() {
+                  document.getElementById("modal").style.display = "none";
+                }
+              </script>
         <section class="section-steps">
         <div class="row" id="working" >
             <h2>  How UTTAM Works</h2>
@@ -416,7 +446,7 @@
                 </ul> -->
             </div>
         </div>
-            <div class="row">
+            <div class="row" >
             <p>
                 UTTAM Agro-Processing &copy; All rights reserved.
                 </p>

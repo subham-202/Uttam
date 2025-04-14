@@ -500,3 +500,92 @@ footer p{
 .ion-social-instagram:hover{
     color: #e4405f;
 }
+
+/* Modal CSS */
+/* body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  } */
+  
+  .section-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 20px; */
+  }
+  
+  .meal-photo {
+    width: 19rem;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.2); */
+    transition: transform 0.3s;
+  }
+  
+  .meal-photo:hover {
+    /* transform: scale(1.05); */
+  }
+  
+  .meal-photo img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .story-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .story-button:hover {
+    background-color: #218838;
+  }
+  
